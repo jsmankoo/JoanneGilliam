@@ -15,7 +15,7 @@ module.exports = {
     display: 'block',
     margin: 'auto',
     width: '100%',
-    maxWidth: '1024px',
+    maxWidth: '1440px',
     padding: '0px 10px'
   },
   header: {
@@ -31,17 +31,22 @@ module.exports = {
   },
   mls: {
     margin: '20px auto',
-    width: '200px',
     border: `1px solid ${Color(colors.forest).rgbString()}`,
-    fontSize: `13px`,
-    padding: '15px',
-    lineHeight: '20px',
+    fontSize: `20px`,
+    padding: '15px 0px 13px',
+    lineHeight: '15px',
     color: Color(colors.forest).rgbString(),
     display: 'block',
-    width: '375px',
+    width: '250px',
     maxWidth: '100%',
     ':hover': {
       color: Color(colors.blue).rgbString(),
+    },
+    '@media (min-width: 1024px)': {
+      position: 'absolute',
+      right: '0px',
+      top: '0px',
+      margin: '0px auto',
     }
   },
   carousel: {

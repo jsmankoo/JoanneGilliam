@@ -18,9 +18,9 @@ var _reactResponsive = require('react-responsive');
 
 var _reactResponsive2 = _interopRequireDefault(_reactResponsive);
 
-var _Carousel = require('./Carousel');
+var _marked = require('marked');
 
-var _Carousel2 = _interopRequireDefault(_Carousel);
+var _marked2 = _interopRequireDefault(_marked);
 
 var _Styles = require('./Styles');
 
@@ -41,45 +41,99 @@ var Featured = function Featured(_ref) {
       _react2.default.createElement(
         'h2',
         { style: [_Styles2.default.header] },
-        'OCEANFRONT PROPERTIES'
-      ),
-      _react2.default.createElement(
-        _reactResponsive2.default,
-        { maxDeviceWidth: 767 },
-        _react2.default.createElement(_Carousel2.default, { data: properties, offset: 0 })
-      ),
-      _react2.default.createElement(
-        _reactResponsive2.default,
-        { minDeviceWidth: 768 },
-        _react2.default.createElement(
-          'div',
-          { style: {
-              backgroundColor: '#FFF',
-              height: 'auto'
-            } },
-          _react2.default.createElement(_Carousel2.default, { data: properties.slice(0, properties.length / 2), offset: 0, style: {
-              '@media (min-width: 767px)': {
-                height: '270px'
-              }
-            } }),
-          _react2.default.createElement(_Carousel2.default, { data: properties.slice(properties.length / 2, properties.length), offset: 25 })
-        )
-      ),
-      _react2.default.createElement(
-        'h2',
-        { style: [_Styles2.default.header] },
+        'FEATURED PROPERTIES',
         _react2.default.createElement(
           'a',
           { href: mls, style: [_Styles2.default.mls] },
-          'SEARCH OCEANFRONT PROPERTIES'
+          'SEARCH THE MLS'
         )
-      )
+      ),
+      _react2.default.createElement(
+        'div',
+        {
+          id: 'featuredProperties',
+          className: 'owl-carousel' },
+        properties.map(function (_ref2, index) {
+          var photo = _ref2.photo;
+          var address = _ref2.address;
+          var link = _ref2.link;
+          var price = _ref2.price;
+          return _react2.default.createElement(
+            'div',
+            { className: 'item', key: link },
+            _react2.default.createElement(
+              'a',
+              { href: link, key: link, style: {
+                  display: 'block',
+                  margin: 'auto',
+                  padding: '0px 12.5px',
+                  color: '#525252',
+                  ':hover': {
+                    opacity: 0.9
+                  }
+                } },
+              _react2.default.createElement('img', { src: photo, style: {
+                  display: 'block',
+                  margin: 'auto',
+                  width: '440px',
+                  maxWidth: '100%'
+                } }),
+              _react2.default.createElement('div', {
+                style: {
+                  display: 'block',
+                  margin: 'auto',
+                  width: '440px',
+                  maxWidth: '100%',
+                  textAlign: 'center',
+                  fontFamily: 'trajan-pro-3',
+                  fontWeight: '600',
+                  padding: '15px 0px',
+                  '@media (min-width: 768px)': {
+                    textAlign: 'left'
+                  }
+                },
+                dangerouslySetInnerHTML: { __html: (0, _marked2.default)(address) }
+              }),
+              _react2.default.createElement(
+                'div',
+                { style: {
+                    display: 'block',
+                    margin: 'auto',
+                    fontSize: '18px',
+                    padding: '0px',
+                    width: '440px',
+                    maxWidth: '100%',
+                    letterSpacing: '1px',
+                    fontFamily: 'trajan-pro-3',
+                    fontWeight: 600,
+                    textAlign: 'center',
+                    '@media (min-width: 768px)': {
+                      textAlign: 'left'
+                    }
+                  } },
+                price
+              )
+            )
+          );
+        })
+      ),
+      _react2.default.createElement(_radium.Style, {
+        scopeSelector: '#featuredProperties',
+        rules: {
+          p: {
+            padding: 0
+          },
+          '.owl-controls': {
+            margin: '25px auto'
+          }
+        }
+      })
     )
   );
 };
 
-var mapStateToProps = function mapStateToProps(_ref2) {
-  var Featured = _ref2.Featured;
+var mapStateToProps = function mapStateToProps(_ref3) {
+  var Featured = _ref3.Featured;
 
   return {
     mls: Featured.get('mlsLink'),

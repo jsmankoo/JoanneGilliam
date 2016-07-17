@@ -70,8 +70,7 @@ var Contact = function Contact(_ref) {
         _react2.default.createElement('i', { style: [_Styles2.default.icon.address], className: 'btr bt-map' }),
         _react2.default.createElement('h5', { style: [_Styles2.default.text], dangerouslySetInnerHTML: { __html: address.text } })
       )
-    ),
-    _react2.default.createElement('img', { src: '/img/logo.png', style: [_Styles2.default.logo] })
+    )
   );
 };
 

@@ -50,16 +50,7 @@ var Jumbotron = function Jumbotron(_ref) {
     _react2.default.createElement(
       'div',
       { style: [_Styles2.default.tint] },
-      _react2.default.createElement(
-        _reactResponsive2.default,
-        { maxDeviceWidth: 1024 },
-        _react2.default.createElement(_SlideShow2.default, { slides: slides })
-      ),
-      _react2.default.createElement(
-        _reactResponsive2.default,
-        { minDeviceWidth: 1025 },
-        _react2.default.createElement(_Video2.default, { videos: videos, poster: poster })
-      ),
+      _react2.default.createElement(_SlideShow2.default, { slides: slides }),
       _react2.default.createElement(_Headline2.default, { headline: headline, subheadline: subheadline, load: load })
     )
   );

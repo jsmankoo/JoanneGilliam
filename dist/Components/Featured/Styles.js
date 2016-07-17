@@ -1,7 +1,5 @@
 'use strict';
 
-var _mls;
-
 var _color = require('color');
 
 var _color2 = _interopRequireDefault(_color);
@@ -9,8 +7,6 @@ var _color2 = _interopRequireDefault(_color);
 var _Styles = require('../../Styles');
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
-
-function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
 
 module.exports = {
   base: {
@@ -26,7 +22,7 @@ module.exports = {
     display: 'block',
     margin: 'auto',
     width: '100%',
-    maxWidth: '1024px',
+    maxWidth: '1440px',
     padding: '0px 10px'
   },
   header: {
@@ -40,18 +36,26 @@ module.exports = {
       margin: '25px auto'
     }
   },
-  mls: (_mls = {
+  mls: {
     margin: '20px auto',
-    width: '200px',
     border: '1px solid ' + (0, _color2.default)(_Styles.colors.forest).rgbString(),
-    fontSize: '13px',
-    padding: '15px',
-    lineHeight: '20px',
+    fontSize: '20px',
+    padding: '15px 0px 13px',
+    lineHeight: '15px',
     color: (0, _color2.default)(_Styles.colors.forest).rgbString(),
-    display: 'block'
-  }, _defineProperty(_mls, 'width', '375px'), _defineProperty(_mls, 'maxWidth', '100%'), _defineProperty(_mls, ':hover', {
-    color: (0, _color2.default)(_Styles.colors.blue).rgbString()
-  }), _mls),
+    display: 'block',
+    width: '250px',
+    maxWidth: '100%',
+    ':hover': {
+      color: (0, _color2.default)(_Styles.colors.blue).rgbString()
+    },
+    '@media (min-width: 1024px)': {
+      position: 'absolute',
+      right: '0px',
+      top: '0px',
+      margin: '0px auto'
+    }
+  },
   carousel: {
     display: 'inline-block',
     whiteSpace: 'nowrap',

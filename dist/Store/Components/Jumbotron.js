@@ -10,9 +10,9 @@ exports.default = function () {
   var state = arguments.length <= 0 || arguments[0] === undefined ? (0, _immutable.fromJS)({
     videos: ['/media/video.mp4', '/media/video.webm'],
     poster: '/media/poster.jpg',
-    slides: ['/img/1.jpg', '/img/2.jpg', '/img/3.jpg', '/img/4.jpg'],
-    headline: 'Premier Oceanfront Properties',
-    subheadline: ''
+    slides: ['/img/poster.jpg'],
+    headline: 'Rancho Mirage',
+    subheadline: 'Real Estate'
   }) : arguments[0];
   var action = arguments[1];
 

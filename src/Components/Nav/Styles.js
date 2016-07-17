@@ -1,5 +1,5 @@
 import Color from 'color';
-import {colors, align} from '../../Styles';
+import {fonts, colors, align} from '../../Styles';
 
 module.exports = {
   base: {
@@ -12,10 +12,11 @@ module.exports = {
   },
   brand: {...align('b'),
     textAlign: 'center',
-    fontSize: '10px',
-    lineHeight: '13px',
+    fontSize: '20px',
+    lineHeight: '20px',
+    fontFamily: 'etica',
     '@media (min-width: 767px)':{
-      fontSize: '16px',
+      fontSize: '30px',
       lineHeight: '16px'
     }
   },

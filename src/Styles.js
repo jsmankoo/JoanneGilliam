@@ -13,7 +13,7 @@ module.exports = {
     grey: '#AFAFAF'
   },
   fonts: {
-    head : 'BlairITCStd',
+    head : 'trajan-pro-3',
     main : 'proxima-nova',
     etica : 'lft-etica-condensed'
   },

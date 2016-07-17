@@ -21,10 +21,11 @@ module.exports = {
   },
   brand: _extends({}, (0, _Styles.align)('b'), {
     textAlign: 'center',
-    fontSize: '10px',
-    lineHeight: '13px',
+    fontSize: '20px',
+    lineHeight: '20px',
+    fontFamily: 'etica',
     '@media (min-width: 767px)': {
-      fontSize: '16px',
+      fontSize: '30px',
       lineHeight: '16px'
     }
   }),

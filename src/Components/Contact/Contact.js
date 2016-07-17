@@ -25,7 +25,6 @@ const Contact = ({name, markdown, mobile, email, address}) => {
           <h5 style={[Styles.text]} dangerouslySetInnerHTML={{__html: address.text }}></h5>
         </a>
       </div>
-      <img src='/img/logo.png' style={[Styles.logo]} />
     </div>
   );
 };

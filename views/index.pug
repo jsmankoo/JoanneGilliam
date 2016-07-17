@@ -3,16 +3,17 @@ html.no-js(lang='en-us')
   head
     meta(charset='utf-8')
     meta(http-equiv='x-ua-compatible', content='ie=edge')
-    title Sample App
+    title Jo Anne Gillian
     meta(name='description', content='')
     meta(name='viewport', content='width=device-width, initial-scale=1')
     link(rel='apple-touch-icon', href='apple-touch-icon.png')
+    link( rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.css")
+    link( rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.theme.min.css")
     link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css')
     link(rel='stylesheet' href='/black-tie/css/black-tie.min.css')
-    link( rel="stylesheet" href="/css/MyFontsWebfontsKit/MyFontsWebfontsKit.css" media="screen" title="Head Font" charset="utf-8")
 
     link(rel='stylesheet', href='css/main.css')
-    script( src="https://use.typekit.net/nhp8yey.js")
+    script( src="https://use.typekit.net/mpg0xzr.js")
     script try{Typekit.load({ async: true });}catch(e){}
   body
     |<!--[if lt IE 9]>
@@ -22,7 +23,25 @@ html.no-js(lang='en-us')
     //- React  App
     #rootApp!= app
 
+    script(   src="https://code.jquery.com/jquery-2.2.3.min.js"   integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo="   crossorigin="anonymous")
+    script( type="text/javascript" src='https://cdnjs.cloudflare.com/ajax/libs/owl-carousel/1.3.3/owl.carousel.min.js')
+
     script( src='/js/bundle.js')
+    script.
+      /*$(function() {
+        $('a[href*="#"]:not([href="#"])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html, body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+      });*/
 
     // Google Analytics: change UA-XXXXX-Y to be your site's ID.
     script.

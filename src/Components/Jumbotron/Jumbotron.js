@@ -12,12 +12,7 @@ const Jumbotron = ({videos, poster, slides, headline, subheadline, load}) => {
   return (
     <div className='Jumbotron' style={[base]}>
       <div style={[Styles.tint]}>
-        <MediaQuery maxDeviceWidth={1024}>
-          <SlideShow slides={slides}/>
-        </MediaQuery>
-        <MediaQuery minDeviceWidth={1025}>
-          <Video videos={videos} poster={poster} />
-        </MediaQuery>
+        <SlideShow slides={slides} />
         <Headline headline={headline} subheadline={subheadline} load={load} />
       </div>
     </div>

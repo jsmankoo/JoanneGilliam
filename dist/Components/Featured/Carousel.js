@@ -4,8 +4,6 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 
-var _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; };
-
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
 var _class;
@@ -44,22 +42,9 @@ var Carousel = (0, _radium2.default)(_class = function (_Component) {
 
     var _this = _possibleConstructorReturn(this, Object.getPrototypeOf(Carousel).call(this, props));
 
-    _this.componentDidMount = function () {
-      var tick = function tick() {
-        var transform = _this.state.transform;
+    _this.componentDidMount = function () {};
 
-        var index = _this.props.data.length ? _this.props.data.length * 100 : 1;
-        _this.setState(_extends({}, _this.state, {
-          transform: (transform + 0.1) % index
-        }));
-        (0, _raf2.default)(tick);
-      };
-      _this.animation = (0, _raf2.default)(tick);
-    };
-
-    _this.componentWillUnount = function () {
-      _raf2.default.cancel(_this.animation);
-    };
+    _this.componentWillUnount = function () {};
 
     _this.state = {
       transform: 0
@@ -77,31 +62,7 @@ var Carousel = (0, _radium2.default)(_class = function (_Component) {
       var style = _props.style;
       var imgStyle = _props.imgStyle;
 
-      var subset = data.slice(0, 2);
-      return _react2.default.createElement(
-        'div',
-        { className: 'Carousel', style: [_Styles2.default.carousel, style] },
-        data.map(function (_ref, index) {
-          var img = _ref.photo;
-
-          return _react2.default.createElement('img', { key: img, src: img, style: {
-              height: '250px',
-              width: 'auto',
-              transform: 'translate(' + (-1 * transform - offset) + '%, 0%)',
-              padding: '0px 10px'
-            } });
-        }),
-        subset.map(function (_ref2, index) {
-          var img = _ref2.photo;
-
-          return _react2.default.createElement('img', { key: img, src: img, style: {
-              height: '250px',
-              width: 'auto',
-              transform: 'translate(' + (-1 * transform - offset) + '%, 0%)',
-              padding: '0px 10px'
-            } });
-        })
-      );
+      return _react2.default.createElement('div', null);
     }
   }]);
 

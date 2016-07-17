@@ -8,7 +8,7 @@ var _immutable = require('immutable');
 
 exports.default = function () {
   var state = arguments.length <= 0 || arguments[0] === undefined ? (0, _immutable.fromJS)({
-    brand: 'Premier Oceanfront Properties',
+    brand: 'Jo Anne Gilliam',
     hover: false,
     iconHover: false
   }) : arguments[0];

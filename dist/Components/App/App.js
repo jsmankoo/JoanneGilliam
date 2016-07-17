@@ -99,10 +99,13 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
         description: description
       });
     },
-    addProperty: function addProperty(photo) {
+    addProperty: function addProperty(photo, address, price, link) {
       dispatch({
         type: 'FEATURED_ADD_PROPERTY',
-        photo: photo
+        photo: photo,
+        address: address,
+        price: price,
+        link: link
       });
     },
     aboutInit: function aboutInit(background, name, tablet, mobile, markdown) {
@@ -125,14 +128,13 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
         address: address
       });
     },
-    footInit: function footInit(copyright, information, facebook, instagram, twitter) {
+    footInit: function footInit(copyright, information, facebook, twitter) {
       dispatch({
         type: 'FOOT_INIT',
         copyright: copyright,
         information: information,
         facebook: facebook,
-        twitter: twitter,
-        instagram: instagram
+        twitter: twitter
       });
     }
   };
@@ -162,7 +164,7 @@ var App = (_dec = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps),
 
       this.timeout = setTimeout(appInit, delay);
       setTimeout(initJumbotron, 1000);
-      _prismic2.default.api('https://robertchristiespa.prismic.io/api').then(function (api) {
+      _prismic2.default.api('https://joanne.prismic.io/api').then(function (api) {
         return api.query(_prismic2.default.Predicates.at('my.index.uid', 'index'));
       }).then(function (_ref2) {
         var results = _ref2.results;
@@ -175,7 +177,7 @@ var App = (_dec = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps),
           var Photo = _ref3.Photo;
           var Price = _ref3.Price;
 
-          addProperty(Photo.value.main.url);
+          addProperty(Photo.value.main.url, Address.value, Price.value, Link.value.url);
         });
         helmetInit(results[0].data['index.PageTitle'].value, results[0].data['index.PageDescription'].value);
         aboutInit(results[0].data['index.BackgroundImage'].value.main.url, results[0].data['index.Name'].value, results[0].data['index.Profile Pic'].value.main.url, results[0].data['index.Mobile Pic'].value.main.url, results[0].data['index.Paragraph'].value);
@@ -189,7 +191,13 @@ var App = (_dec = (0, _reactRedux.connect)(mapStateToProps, mapDispatchToProps),
           link: results[0].data['index.AddressLink'].value.url,
           text: results[0].data['index.Address'].value
         });
-        footInit(results[0].data['index.Copyright'].value, results[0].data['index.Information'].value, results[0].data['index.facebook'].value.url, results[0].data['index.Twitter'].value.url, results[0].data['index.Instagram'].value.url);
+        footInit(results[0].data['index.Copyright'].value, results[0].data['index.Information'].value, results[0].data['index.facebook'].value.url, results[0].data['index.Twitter'].value.url);
+        $(".owl-carousel").owlCarousel({
+          dots: true,
+          autoPlay: true,
+          items: 3,
+          itemsCustom: [[0, 1], [768, 2], [1024, 3]]
+        });
       });
     }
   }, {

@@ -52,7 +52,7 @@ var Nav = function Nav(_ref) {
     _react2.default.createElement(
       _reactMotion.Motion,
       { style: {
-          letterSpacing: hover ? (0, _reactMotion.spring)(4, _reactMotion.presets.gentle) : (0, _reactMotion.spring)(3, _reactMotion.presets.gentle)
+          letterSpacing: hover ? (0, _reactMotion.spring)(6, _reactMotion.presets.gentle) : (0, _reactMotion.spring)(4, _reactMotion.presets.gentle)
         } },
       function (_ref2) {
         var letterSpacing = _ref2.letterSpacing;

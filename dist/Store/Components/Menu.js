@@ -11,7 +11,7 @@ exports.default = function () {
     open: false,
     data: [{
       name: 'HOME',
-      link: 'http://www.premieroceanfrontproperties.com/',
+      link: '/',
       border: false,
       hover: false
     }, {
@@ -20,55 +20,31 @@ exports.default = function () {
       hover: false,
       open: false,
       submenu: [{
-        name: 'Oceanfront',
-        link: 'http://idx.premieroceanfrontproperties.com/report/listing-report/OCEANFRONT-PROPERTIES/62458/134554',
+        name: 'FEATURED',
+        link: '#featured',
         hover: false,
         full: true
       }, {
-        name: 'Corona Del Mar',
-        link: 'http://idx.premieroceanfrontproperties.com/report/listing-report/Corona-Del-Mar/62458/134547',
+        name: 'MLS SEARCH',
+        link: 'http://idx.hklane.com/homesearch/51244',
         hover: false,
         full: true
       }, {
-        name: 'Dana Point',
-        link: 'http://idx.premieroceanfrontproperties.com/report/listing-report/Dana-Point/62458/134548',
-        hover: false,
-        full: true
-      }, {
-        name: 'Laguna Beach',
-        link: 'http://idx.premieroceanfrontproperties.com/report/listing-report/Laguna-Beach/62458/134549',
-        hover: false,
-        full: true
-      }, {
-        name: 'Newport Beach',
-        link: 'http://idx.premieroceanfrontproperties.com/report/listing-report/Newport-Beach/62458/134550',
-        hover: false,
-        full: true
-      }, {
-        name: 'San Clemente',
-        link: 'http://idx.premieroceanfrontproperties.com/report/listing-report/San-Clemente/62458/134546',
-        hover: false,
-        full: true
-      }, {
-        name: 'MLS Search',
-        link: 'http://idx.premieroceanfrontproperties.com/homesearch/62458',
+        name: 'OPEN HOMES',
+        link: 'http://idx.hklane.com/openhomes/51244',
         hover: false,
         full: true
       }]
     }, {
-      name: 'PROFILE',
+      name: 'JO ANNE',
+      link: '#about',
       border: true,
-      hover: false,
-      open: false,
-      submenu: [{
-        name: 'ABOUT',
-        link: '#about',
-        hover: false
-      }, {
-        name: 'CONTACT',
-        link: '#contact',
-        hover: false
-      }]
+      hover: false
+    }, {
+      name: 'CONTACT',
+      link: '#contact',
+      border: true,
+      hover: false
     }]
   }) : arguments[0];
   var action = arguments[1];

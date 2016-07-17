@@ -4,20 +4,22 @@ import {connect} from 'react-redux';
 
 import Styles from './Styles';
 
-const Foot = ({copyright, information, facebook, twitter, instagram}) => {
+const Foot = ({copyright, information, facebook, twitter}) => {
+  console.log(twitter);
+  console.log(facebook);
   return (
     <div className='Foot' style={[Styles.base]}>
       <div className='Copyright' style={[Styles.copyright]}>
         {copyright}<br />{information}
       </div>
       <div className='SocialMedia' style={[Styles.socialMedia]}>
-        {/*<a href={facebook} target='_blank' style={[Styles.socialMedia.a]}>
+        <a href={facebook} target='_blank' style={[Styles.socialMedia.a]}>
           <i className='fa fa-facebook-f' />
         </a>
         <a href={twitter} target='_blank' style={[Styles.socialMedia.a]}>
           <i className='fa fa-twitter' />
         </a>
-        <a href={instagram} target='_blank' style={[Styles.socialMedia.a]}>
+        {/*<a href={instagram} target='_blank' style={[Styles.socialMedia.a]}>
           <i className='fa fa-instagram' />
         </a>*/}
       </div>

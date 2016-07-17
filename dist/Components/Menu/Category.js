@@ -71,6 +71,7 @@ var Category = function Category(_ref) {
             onMouseOut: onMouseOut,
             onMouseOver: onMouseOver,
             className: 'H3',
+            onClick: link && toggleMenu,
             href: link,
             style: [_Styles2.category.a, {
               backgroundColor: (0, _color2.default)(_Styles.colors.white).clearer(background).rgbString(),

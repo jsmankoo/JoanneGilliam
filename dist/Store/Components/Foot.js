@@ -8,7 +8,7 @@ var _immutable = require('immutable');
 
 exports.default = function () {
   var state = arguments.length <= 0 || arguments[0] === undefined ? (0, _immutable.fromJS)({
-    copyright: 'CalBre #00600727 Copyright © 2016 Robert Christie.',
+    copyright: 'CalBre #01469441 Copyright © 2016 JoAnne Gilliam.',
     information: 'Information deemed reliable but not guaranteed or verified.',
     facebook: '//facebook.com',
     twitter: '//twitter.com',
@@ -18,7 +18,8 @@ exports.default = function () {
 
   switch (action.type) {
     case 'FOOT_INIT':
-      return state.set('copyright', action.copyright).set('information', action.information).set('facebook', action.facebook).set('twitter', action.twitter).set('instagram', action.instagram);
+      console.log(action);
+      return state.set('copyright', action.copyright).set('information', action.information).set('facebook', action.facebook).set('twitter', action.twitter);
     default:
       return state;
   }

@@ -20,9 +20,9 @@ module.exports = {
     textAlign: 'center',
     padding: '20px 0px',
     width: '100%',
-    fontSize: '13px',
+    fontSize: '12px',
     '@media (min-width: 767px)':{
-      width: '50%',
+      width: '40%',
       textAlign: 'left',
       padding: '0px',
     }
@@ -33,7 +33,7 @@ module.exports = {
     width: '100%',
     fontSize: '13px',
     '@media (min-width: 767px)':{
-      width: '50%',
+      width: '40%',
       textAlign: 'right',
       padding: '0px',
     }
@@ -44,7 +44,7 @@ module.exports = {
     flexDirection: 'row',
     width: '100%',
     '@media (min-width: 767px)':{
-      width: '0%',
+      width: '20%',
       padding: '0px',
     },
     a: {

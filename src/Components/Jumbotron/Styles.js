@@ -19,7 +19,8 @@ module.exports = {
   },
   tint: {
     height: '100%',
-    width: '100%'
+    width: '100%',
+    backgroundColor: Color(colors.black).clearer(0.75).hslString()
   },
   headline:{...align('v'),
     width: '100%',

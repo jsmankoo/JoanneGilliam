@@ -13,7 +13,7 @@ const Nav = ({brand, hover, onHover, open, toggle, iconHover, iconOnHover, LinkO
   return (
     <div className='Nav' style={[base]}>
       <Motion style={{
-        letterSpacing: hover ? spring(4, presets.gentle) : spring(3, presets.gentle)
+        letterSpacing: hover ? spring(6, presets.gentle) : spring(4, presets.gentle)
       }}>
         {
           ({letterSpacing}) => (

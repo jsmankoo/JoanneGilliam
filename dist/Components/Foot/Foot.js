@@ -25,8 +25,9 @@ var Foot = function Foot(_ref) {
   var information = _ref.information;
   var facebook = _ref.facebook;
   var twitter = _ref.twitter;
-  var instagram = _ref.instagram;
 
+  console.log(twitter);
+  console.log(facebook);
   return _react2.default.createElement(
     'div',
     { className: 'Foot', style: [_Styles2.default.base] },
@@ -37,7 +38,20 @@ var Foot = function Foot(_ref) {
       _react2.default.createElement('br', null),
       information
     ),
-    _react2.default.createElement('div', { className: 'SocialMedia', style: [_Styles2.default.socialMedia] }),
+    _react2.default.createElement(
+      'div',
+      { className: 'SocialMedia', style: [_Styles2.default.socialMedia] },
+      _react2.default.createElement(
+        'a',
+        { href: facebook, target: '_blank', style: [_Styles2.default.socialMedia.a] },
+        _react2.default.createElement('i', { className: 'fa fa-facebook-f' })
+      ),
+      _react2.default.createElement(
+        'a',
+        { href: twitter, target: '_blank', style: [_Styles2.default.socialMedia.a] },
+        _react2.default.createElement('i', { className: 'fa fa-twitter' })
+      )
+    ),
     _react2.default.createElement(
       'div',
       { className: 'Developer', style: [_Styles2.default.developer] },

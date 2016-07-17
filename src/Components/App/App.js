@@ -43,10 +43,13 @@ const mapDispatchToProps = (dispatch) => {
         description
       });
     },
-    addProperty(photo){
+    addProperty(photo, address, price, link){
       dispatch({
         type: 'FEATURED_ADD_PROPERTY',
-        photo
+        photo,
+        address,
+        price,
+        link
       });
     },
     aboutInit(background, name, tablet, mobile, markdown){
@@ -69,14 +72,13 @@ const mapDispatchToProps = (dispatch) => {
         address
       });
     },
-    footInit(copyright, information, facebook, instagram, twitter){
+    footInit(copyright, information, facebook, twitter){
       dispatch({
         type: 'FOOT_INIT',
         copyright,
         information,
         facebook,
-        twitter,
-        instagram
+        twitter
       });
     }
   };
@@ -89,13 +91,18 @@ class App extends Component {
     const {delay, appInit, initJumbotron, addProperty, aboutInit, contactInit, footInit, helmetInit} = this.props;
     this.timeout = setTimeout(appInit, delay)
     setTimeout(initJumbotron, 1000);
-    Prismic.api('https://robertchristiespa.prismic.io/api')
+    Prismic.api('https://joanne.prismic.io/api')
       .then((api)=>api.query(Prismic.Predicates.at('my.index.uid', 'index')))
       .then(({results}) => {
         console.log(results[0].data);
         // Init Properties
         results[0].data['index.Properties'].value.forEach(({Address, Link, Photo, Price}) => {
-          addProperty(Photo.value.main.url);
+          addProperty(
+            Photo.value.main.url,
+            Address.value,
+            Price.value,
+            Link.value.url
+          );
         });
         helmetInit(
           results[0].data['index.PageTitle'].value,
@@ -128,9 +135,14 @@ class App extends Component {
           results[0].data['index.Copyright'].value,
           results[0].data['index.Information'].value,
           results[0].data['index.facebook'].value.url,
-          results[0].data['index.Twitter'].value.url,
-          results[0].data['index.Instagram'].value.url
+          results[0].data['index.Twitter'].value.url
         );
+        $(".owl-carousel").owlCarousel({
+          dots: true,
+          autoPlay: true,
+          items: 3,
+          itemsCustom: [[0, 1], [768,2], [1024,3]]
+        });
       });
 
   }

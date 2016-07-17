@@ -57,7 +57,17 @@ var Headline = function Headline(_ref) {
           'h1',
           { style: [{
               transform: 'translate(0%, ' + styles[0].transform + '%)',
-              opacity: styles[0].opacity
+              opacity: styles[0].opacity,
+              fontSize: '35px',
+              lineHeight: '40px',
+              '@media (min-width: 768px)': {
+                fontSize: '60px',
+                lineHeight: '70px'
+              },
+              '@media (min-width: 1024px)': {
+                fontSize: '75px',
+                lineHeight: '85px'
+              }
             }] },
           headline
         ),
@@ -65,7 +75,13 @@ var Headline = function Headline(_ref) {
           'h5',
           { style: [{
               transform: 'translate(0%, ' + styles[1].transform + '%)',
-              opacity: styles[1].opacity
+              opacity: styles[1].opacity,
+              fontSize: '14px',
+              lineHeight: '20px',
+              '@media (min-width: 768px)': {
+                fontSize: '20px',
+                lineHeight: '30px'
+              }
             }] },
           subheadline
         )

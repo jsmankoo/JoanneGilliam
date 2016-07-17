@@ -59,7 +59,7 @@ module.exports = {
     },
     tablet: {
       display: 'none',
-      height: '413px',
+      height: '350px',
       width: '291px',
       margin: '0 auto',
       '@media (min-width:767px)': {
@@ -73,6 +73,8 @@ module.exports = {
     height: 'auto',
     textAlign: 'center',
     '@media (min-width: 767px)': {
+      position: 'relative',
+      top: '-15px',
       width: '60%',
       textAlign: 'left'
     }

@@ -29,7 +29,7 @@ var MenuSVG = function MenuSVG(_ref) {
       { height: '100%', width: '100%', viewBox: '0 0 14 14' },
       _react2.default.createElement(
         'g',
-        { fill: 'none', 'fill-rule': 'evenodd', id: 'Page-1', stroke: 'none', 'stroke-width': '1' },
+        { fill: 'none', fillRule: 'evenodd', id: 'Page-1', stroke: 'none', strokeWidth: '1' },
         _react2.default.createElement(
           'g',
           { fill: color, id: 'Core', transform: 'translate(-341.000000, -89.000000)' },

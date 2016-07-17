@@ -1,7 +1,7 @@
 import {fromJS} from 'immutable';
 
 export default (state = fromJS({
-  brand: 'Premier Oceanfront Properties',
+  brand: 'Jo Anne Gilliam',
   hover: false,
   iconHover: false
 }), action) => {

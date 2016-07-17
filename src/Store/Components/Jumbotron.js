@@ -4,13 +4,10 @@ export default (state = fromJS({
   videos: ['/media/video.mp4', '/media/video.webm'],
   poster: '/media/poster.jpg',
   slides: [
-    '/img/1.jpg',
-    '/img/2.jpg',
-    '/img/3.jpg',
-    '/img/4.jpg'
+    '/img/poster.jpg'
   ],
-  headline: 'Premier Oceanfront Properties',
-  subheadline: ''
+  headline: 'Rancho Mirage',
+  subheadline: 'Real Estate'
 }), action) => {
   switch (action.type) {
     default:

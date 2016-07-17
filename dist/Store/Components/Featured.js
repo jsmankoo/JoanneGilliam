@@ -8,7 +8,7 @@ var _immutable = require('immutable');
 
 exports.default = function () {
   var state = arguments.length <= 0 || arguments[0] === undefined ? (0, _immutable.fromJS)({
-    mlsLink: 'http://idx.premieroceanfrontproperties.com/report/listing-report/OCEANFRONT-PROPERTIES/62458/134554',
+    mlsLink: 'http://idx.hklane.com/homesearch/51244',
     properties: []
   }) : arguments[0];
   var action = arguments[1];
@@ -19,7 +19,10 @@ exports.default = function () {
     case 'FEATURED_ADD_PROPERTY':
       return state.update('properties', function (properties) {
         return properties.push((0, _immutable.fromJS)({
-          photo: action.photo
+          photo: action.photo,
+          address: action.address,
+          price: action.price,
+          link: action.link
         }));
       });
     default:

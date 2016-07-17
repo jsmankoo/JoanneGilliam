@@ -22,6 +22,7 @@ const Category = ({name, LinkOveride, open ,hover, onMouseOver, onMouseOut, link
               onMouseOut={onMouseOut}
               onMouseOver={onMouseOver}
               className='H3'
+              onClick={link && toggleMenu}
               href={link}
               style={[category.a, {
                 backgroundColor: Color(colors.white).clearer(background).rgbString(),
