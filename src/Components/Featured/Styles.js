@@ -35,12 +35,12 @@ module.exports = {
     fontSize: `20px`,
     padding: '15px 0px 13px',
     lineHeight: '15px',
-    color: Color(colors.forest).rgbString(),
+    color: Color(colors.red).rgbString(),
     display: 'block',
     width: '250px',
     maxWidth: '100%',
     ':hover': {
-      color: Color(colors.blue).rgbString(),
+      color: Color(colors.pink).rgbString(),
     },
     '@media (min-width: 1024px)': {
       position: 'absolute',

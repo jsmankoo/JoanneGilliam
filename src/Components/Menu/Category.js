@@ -26,7 +26,7 @@ const Category = ({name, LinkOveride, open ,hover, onMouseOver, onMouseOut, link
               href={link}
               style={[category.a, {
                 backgroundColor: Color(colors.white).clearer(background).rgbString(),
-                color: Color(colors.blue).lighten(color).rgbString(),
+                color: Color(colors.red).lighten(color).rgbString(),
                 letterSpacing: `${letterSpacing}px`
               }]}
             >

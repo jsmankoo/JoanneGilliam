@@ -8,7 +8,7 @@ module.exports = {
     height: '50px',
     position: 'fixed',
     top: '0px',
-    backgroundColor: Color(colors.blue).clearer(0.25).rgbString(),
+    backgroundColor: Color(colors.red).clearer(0.25).rgbString(),
   },
   brand: {...align('b'),
     textAlign: 'center',

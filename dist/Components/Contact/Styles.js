@@ -62,7 +62,7 @@ module.exports = {
     padding: '15px 0px',
     color: (0, _color2.default)(_Styles.colors.black).rgbString(),
     ':hover': {
-      color: (0, _color2.default)(_Styles.colors.blue).rgbString()
+      color: (0, _color2.default)(_Styles.colors.red).rgbString()
     },
     '@media (min-width: 767px)': {
       width: '33%'

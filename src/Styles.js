@@ -5,10 +5,10 @@ module.exports = {
     dark : '#333333',
     cream : '#FBFFE3',
     white : '#FFFFFF',
-    pink : '#E21B5A',
+    pink : '#980D2F',
     greyGreen : '#BAC9A9',
     forest : '#697060',
-    red : '#C44D58',
+    red : '#D21341',
     blue: '#5c858e',
     grey: '#AFAFAF'
   },

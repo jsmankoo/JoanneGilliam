@@ -22,11 +22,11 @@ module.exports = {
       top: '50px',
       width: '300px',
       height: '100%',
-      backgroundColor: (0, _color2.default)(_Styles.colors.blue).clearer(0.25).rgbString()
+      backgroundColor: (0, _color2.default)(_Styles.colors.red).clearer(0.25).rgbString()
     }
   },
   category: {
-    backgroundColor: (0, _color2.default)(_Styles.colors.blue).clearer(0.25).rgbString(),
+    backgroundColor: (0, _color2.default)(_Styles.colors.red).clearer(0.25).rgbString(),
     '@media (min-width: 768px)': {
       backgroundColor: 'transparent'
     },

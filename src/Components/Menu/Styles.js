@@ -13,11 +13,11 @@ module.exports = {
       top: '50px',
       width: '300px',
       height: '100%',
-      backgroundColor: Color(colors.blue).clearer(0.25).rgbString()
+      backgroundColor: Color(colors.red).clearer(0.25).rgbString()
     }
   },
   category: {
-    backgroundColor: Color(colors.blue).clearer(0.25).rgbString(),
+    backgroundColor: Color(colors.red).clearer(0.25).rgbString(),
     '@media (min-width: 768px)':{
       backgroundColor: 'transparent',
     },

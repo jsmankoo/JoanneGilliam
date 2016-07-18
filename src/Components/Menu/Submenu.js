@@ -41,7 +41,7 @@ const Submenu = ({open, data, category, onHover, toggleMenu, LinkOveride}) => {
                         onMouseOut={onHover(category, index)}
                         onClick={toggleMenu}
                         style={[submenu.a, {
-                          color: Color(colors.blue).lighten(color).rgbString(),
+                          color: Color(colors.red).lighten(color).rgbString(),
                           backgroundColor: Color(colors.white).clearer(background).rgbString(),
                           letterSpacing: `${letterSpacing}px`
                         }]}

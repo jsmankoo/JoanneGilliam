@@ -99,10 +99,10 @@ a img {
 }
 a {
   text-decoration: none;
-  color: #5c858e;
+  color: #d21341;
 }
 a:hover {
-  color: #374f56;
+  color: #980d2f;
 }
 h1,
 .H1 {
@@ -204,6 +204,9 @@ html body {
   font-weight: 400;
   position: relative;
   font-family: 'proxima-nova';
+}
+html body .owl-theme .owl-controls .owl-page span {
+  background: #d21341;
 }
 html body #ihf-main-container {
   position: relative;

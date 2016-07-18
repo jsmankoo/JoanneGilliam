@@ -78,7 +78,7 @@ var Submenu = function Submenu(_ref) {
                   onMouseOut: onHover(category, index),
                   onClick: toggleMenu,
                   style: [_Styles.submenu.a, {
-                    color: (0, _color2.default)(_Styles2.colors.blue).lighten(color).rgbString(),
+                    color: (0, _color2.default)(_Styles2.colors.red).lighten(color).rgbString(),
                     backgroundColor: (0, _color2.default)(_Styles2.colors.white).clearer(background).rgbString(),
                     letterSpacing: letterSpacing + 'px'
                   }]

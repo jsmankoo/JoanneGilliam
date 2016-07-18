@@ -17,7 +17,7 @@ module.exports = {
     height: '50px',
     position: 'fixed',
     top: '0px',
-    backgroundColor: (0, _color2.default)(_Styles.colors.blue).clearer(0.25).rgbString()
+    backgroundColor: (0, _color2.default)(_Styles.colors.red).clearer(0.25).rgbString()
   },
   brand: _extends({}, (0, _Styles.align)('b'), {
     textAlign: 'center',

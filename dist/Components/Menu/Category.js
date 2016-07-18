@@ -75,7 +75,7 @@ var Category = function Category(_ref) {
             href: link,
             style: [_Styles2.category.a, {
               backgroundColor: (0, _color2.default)(_Styles.colors.white).clearer(background).rgbString(),
-              color: (0, _color2.default)(_Styles.colors.blue).lighten(color).rgbString(),
+              color: (0, _color2.default)(_Styles.colors.red).lighten(color).rgbString(),
               letterSpacing: letterSpacing + 'px'
             }]
           },
